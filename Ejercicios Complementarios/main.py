@@ -87,5 +87,5 @@ print(nombre_min)
 
 #16. Por último, con la variable con el nombre en mayúsculas, aplica un método parecido
 #para que se transforme todo en minúsculas excepto la primera letra
-nombre2=nombre_may.capitalize()
+nombre2=nombre_may.title()
 print(nombre2)

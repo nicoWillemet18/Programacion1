@@ -120,7 +120,7 @@ print("La distancia entre los números es: ", distancia * -1) if distancia < 0 e
 
 #ej 12 raiz
 num=float(input("Ingrese un numero para saber su raiz cubica y cuadrada: "))
-print ("Su raiz cubica es: ", (num//3), " y su raiz cuadrada es: ", (num//2))
+print ("Su raiz cubica es: ", num**1/3, " y su raiz cuadrada es: ", num**1/2)
 
 #ej 13 
 num=str(input("Ingrese un numero para saber su invertido: "))
@@ -173,8 +173,14 @@ ano = input("Año: ")
 print("Tu fecha de Nacimiento es: ", dia,"/", mes,"/", ano)
 
 #Ejercicio 20
-naciemiento = [(input("Ingrese tu dia de nacimineto: \n")), (input("Ingrese tu mes de nacimineto: \n")), (input("Ingrese tu año de nacimineto: \n"))]
-print("Tu fecha de nacimiento es: ", naciemiento[0], "/", naciemiento[1], "/", naciemiento[2])
+nacimiento = input("Ingrese su fecha de nacimineto (DD/MM/AAAA): ")
+if len(nacimiento) != 10:
+    print("La entrada no tiene el formato correcto.")
+else:
+    dia = nacimiento[0:2]
+    mes = nacimiento[3:5]
+    anio = nacimiento[6:10]
+print("Tu fecha de nacimiento es:", dia, "/", mes, "/", anio)
 
 #Ejercicio 21
 

@@ -1,6 +1,4 @@
 import random
-from funcion_ahorcado import mostrar_word
-
 
 words=["hospital", "canguro", "esperar", "programador", "prueba", "grupos", "escritorio"]
 word = random.choice(words)
@@ -9,6 +7,15 @@ print("Bienvenido al juego \"Ahorcado\", puedes tener hasta 7 errores antes de a
 
 adivinadas = []
 error=0
+
+def mostrar_word (palabra, adivinadas):
+    palabra_mostrada = ""
+    for letra in palabra:  
+        if letra in adivinadas:
+            palabra_mostrada += letra
+        else:
+            palabra_mostrada += "_"
+    return palabra_mostrada
 
 while True:
     palabra_mostrada = mostrar_word(word, adivinadas)

@@ -22,17 +22,18 @@ def length_last_word (phrase):
     else:
         return 0
 
-def identifier (name, length, dni):
-    identifier=(f"Su identificador es: {name[0]}{len(length)}{dni[:3]}")
-    return print(identifier)
+def identifier(name, length, dni):
+    identifier = f"Su identificador es: {name[0]}{len(length)}{str(dni)[:3]}"
+    print(identifier)
+    return identifier
 
 def multiplier (x, y):
     if x % y == 0:
-        return print(f"{x} es múltiplo de {y}")
+        return f"{y} es múltiplo de {x}"
     elif y % x == 0:
-        return print(f"{y} es múltiplo de {x}")
+        return f"{x} es múltiplo de {y}"
     else:
-        return print("Ninguno de los números es múltiplo del otro.")
+        return "Ninguno de los números es múltiplo del otro."
 
 def calculate_average_temperature(temp_max, temp_min):
     medium_temperature = (temp_max + temp_min) / 2

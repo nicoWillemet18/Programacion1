@@ -1,15 +1,11 @@
 import math
-
+#1
 def dni_valido (dni):
-    while True:
-        if len(dni) != 7 and len(dni) != 8:
-            print("Error: DNI inválido.")
-            dni=input("Ingrese un DNI válido: ")
-            dni_valido(dni)
-            return False
-        else:
-            return True
-
+    if len(str(dni)) != 7 and len(str(dni))!= 8:
+        return False
+    else:
+        return True
+#2
 def length_last_word (phrase):
     phrase=phrase.strip() # Elimina espacios al final y principio de la frase.
     words=phrase.split() # Obtiene cantidad de palabras
@@ -21,24 +17,23 @@ def length_last_word (phrase):
         return length_last_word
     else:
         return 0
-
-def identifier(name, length, dni):
-    identifier = f"Su identificador es: {name[0]}{len(length)}{str(dni)[:3]}"
-    print(identifier)
-    return identifier
-
+#3
+def identifier (name, length, dni):
+    identifier=(f"Su identificador es: {name[0]}{len(length)}{dni[:3]}")
+    return print(identifier)
+#4
 def multiplier (x, y):
     if x % y == 0:
-        return f"{y} es múltiplo de {x}"
+        return print(f"{x} es múltiplo de {y}")
     elif y % x == 0:
-        return f"{x} es múltiplo de {y}"
+        return print(f"{y} es múltiplo de {x}")
     else:
-        return "Ninguno de los números es múltiplo del otro."
-
+        return print("Ninguno de los números es múltiplo del otro.")
+#5
 def calculate_average_temperature(temp_max, temp_min):
     medium_temperature = (temp_max + temp_min) / 2
     return medium_temperature
-
+#6
 def space_between(phrase):
     spaces = ""
     for letter in phrase:
@@ -48,6 +43,7 @@ def space_between(phrase):
             spaces += letter
     return spaces
 
+#7
 def max_min(lista):
     if len(lista) == 0:
         return None, None
@@ -59,22 +55,22 @@ def max_min(lista):
             min = value
     return max, min
 
+#8
 def circumference_perimeter(radio):
     if radio <= 0:
         return None, None
     area = math.pi * radio ** 2
     perimeter = 2 * math.pi * radio
     return area, perimeter
-
-def login(user, password, attempts):
+#9
+def login(user, password):
     user_correct = "user1"
     password_correct = "asdasd"
 
     if user == user_correct and password == password_correct:
-        return True, attempts
+        return True
     else:
-        attempts += 1
-        return False, attempts
+        return False
     
 def calculate_final_price(cart):
     final_price = 0

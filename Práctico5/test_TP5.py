@@ -1,30 +1,101 @@
 import pytest
 from funciones import *
 
-# @pytest.mark.parametrize("a, b, c, res",[
-#     ("Nicolas Federico", "Willemet", 42914807, "Nicolas8429"),
-#     ("Juan José", "Roca", 26945623, "Juan4269")
-# ])
-# def test_identifier(a, b, c, res):
-#     assert identifier(a,b,c) == res
+#1
 
-# @pytest.mark.parametrize("a, b, res",[
-#     (4,20, "20 es múltiplo de 4"),
-#     (5,20, "20 es múltiplo de 5"),
-# ])
-# def test_multiplier(a, b, res):
-#     assert multiplier(a,b) == res
-
-@pytest.mark.parametrize("a, res",[
-    ("Hola buenas tardes", 6),
-    ("Mi nombre es Nicolas y tengo 23 años", 4),
+@pytest.mark.parametrize("dni, res",[
+   (2222222,True),
+   (12,False),
 ])
-def test_length_last_word(a, res):
-    assert length_last_word(a) == res
 
-@pytest.mark.parametrize("a, res",[
-    ("Hola buenas tardes", "H o l a  b u e n a s  t a r d e s"),
-    ("Mi nombre es Nicolas y tengo 23 años", "M i  n o m b r e  e s  N i c o l a s  y  t e n g o  2 3  a ñ o s"),
+
+def test_dni_valido(dni,res):
+   assert dni_valido(dni)==res
+#2
+@pytest.mark.parametrize("phrase, res",[
+   ("hola como estas",5),
+   ("chau amigos",6),
 ])
-def test_space_between(a, res):
-    assert space_between(a) == res
+def test_length_last_word(phrase,res):
+   assert length_last_word(phrase)==res
+
+#5
+
+@pytest.mark.parametrize("temp_max, tem_min, res",[
+   (20,10,15),
+
+])
+def test_calculate_average_temperature(temp_max, tem_min, res):
+   assert calculate_average_temperature(temp_max, tem_min)==res
+
+calculate_average_temperature
+
+#6
+space_between
+
+@pytest.mark.parametrize("phrase, res",[
+   ("hola mateo","h o l a  m a t e o "),
+
+])
+def test_space_between(phrase,res):
+   assert space_between(phrase)==res
+
+#7
+@pytest.mark.parametrize("lista, res",[
+   ([1,2,3,4,5],(5,1)),
+
+])
+def test_max_min(lista,res):
+   assert max_min(lista)==res
+
+#9
+@pytest.mark.parametrize("user, password, res",[
+   ("123","123",False),
+
+])
+def test_login(user, password,res):
+   assert login(user, password)==res
+
+#12
+@pytest.mark.parametrize("sentence, res",[
+   ("hola mundo",{'hola':4,'mundo':5}),
+
+])
+def test_words_length_dictionary(sentence, res):
+   assert words_length_dictionary(sentence)==res
+
+#14
+@pytest.mark.parametrize("number, res",[
+   (3,True),
+
+])
+def test_is_prime(number, res):
+   assert is_prime(number)==res
+
+#15
+@pytest.mark.parametrize("n, res",[
+   (0,1),
+
+])
+def test_factorial(n, res):
+   assert factorial(n)==res
+
+#17
+@pytest.mark.parametrize("number, res",[
+   (11,2),
+
+])
+def test_sum_digits(number, res):
+   assert sum_digits(number)==res
+
+
+
+
+
+
+
+
+
+
+
+
